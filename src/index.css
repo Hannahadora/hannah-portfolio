@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{padding: 0; margin: 0; box-sizing: border-box;}
+body { background: #000; color: #fff; font-family: 'Space Grotesk', sans-serif;}
+.nav-adjust {  z-index: 2;}
+.img-adjust-2 { z-index: 0;}
+
+.page-wrapper { margin-left: 80px; margin-right: 80px; position: relative;}
+
+/* input-style */
+.wrapper{ background: inherit; padding: 10px 0 30px 0; width: 100%;}
+.wrapper .input-data{ width: 100%; position: relative;}
+.wrapper .input-data input{ all: unset; height: 100%; width: 100%; border: none; outline: none; font-size: 16px; padding-left: 12px; border-bottom: 1px solid rgb(240, 240, 240);}
+.input-data  input:focus ~ label,
+.input-data input:valid ~ label{ transform: translateY(-20px); font-size: 13px; color: #fff; opacity: 0.5;}
+.wrapper .input-data label{ padding-left: 12px; position: absolute; bottom: 5px; left: 0; font-size: 14px; text-transform: uppercase; color: rgb(165, 164, 164); pointer-events: none; transition: all 0.3s ease;}
+.input-data .underline{ position: absolute; height: 2px; width: 100%; bottom: 0;}
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active  { -webkit-box-shadow: 0 0 0 30px inherit inset !important;}
+
+.input-data .underline:before{ position: absolute; bottom: 0; content: ""; height: 100%; width: 100%; background: rgb(34 197 94 ); transform: scaleX(0); transform-origin: center; transition: transform 0.3s ease;}
+.input-data input:focus ~ .underline:before,
+.input-data input:valid ~ .underline:before{ transform: scaleX(1); width: 104%;}
+
+/* textarea */
+.input-data  textarea:focus ~ label,
+.input-data textarea:valid ~ label{ transform: translateY(-20px); font-size: 13px; color: #fff; opacity: 0.5;}
+.wrapper .input-data > textarea{ all: unset; padding-left: 12px; height: 100%; width: 100%; border: none; outline: none; font-size: 16px; border-bottom: 1px solid rgb(240, 240, 240);}
+.input-data textarea:focus ~ .underline:before,
+.input-data textarea:valid ~ .underline:before{ transform: scaleX(1); width: 104%;}
+
+.wrapper .input-data > .textarea-label { padding-left: 12px; position: absolute; bottom: 50px; left: 0; font-size: 14px; text-transform: uppercase; color: rgb(165, 164, 164); pointer-events: none; transition: all 0.3s ease;}
+.margin-adjust { margin-bottom: 6px;}
+
+@media screen and (max-width: 1024px) {
+  .page-wrapper { margin-left: 20px; margin-right: 20px; }
+  .ovf { overflow-x: hidden;}
+
+}
