@@ -5,14 +5,24 @@ import Tilt from "react-parallax-tilt";
 import Tabs from "./Shared/Tabs";
 
 const Projects = () => {
-  const [activeTab, setActiveTab] = useState("vue");
+  const [activeTab, setActiveTab] = useState("all");
 
   const getCurrentIndex = (tab) => {
     setActiveTab(tab);
   };
 
-  const renderProjects = projects.map((project, i) =>
-    project && project.type === activeTab ? (
+  const filteredProjects = () => {
+    if(activeTab === "all") {
+      return projects && projects
+    } else {
+      return projects?.filter(project => project?.type === activeTab)
+    }
+  }
+
+  const projectsToRender = filteredProjects(); // Call the function to get the array
+
+  const renderProjects = projectsToRender?.map((project, i) =>
+      (
       <div className="uppercase mb-16 cursor-pointer" key={i}>
         <Tilt
           className="tilt"
@@ -40,8 +50,6 @@ const Projects = () => {
           ))}
         </div>
       </div>
-    ) : (
-      ""
     )
   );
 
@@ -56,7 +64,7 @@ const Projects = () => {
         </div>
 
         <Tabs
-          tabs={["vue", "react"]}
+          tabs={["all", "vue", "react"]}
           currentTab={(tab) => getCurrentIndex(tab)}
         />
         <div className="sm:grid block grid-cols-4 lg:grid-cols-3 md:grid-cols-2 auto-rows-auto gap-x-[40px]	 ">

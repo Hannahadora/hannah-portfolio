@@ -3,6 +3,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+}
+
 *{padding: 0; margin: 0; box-sizing: border-box;}
 body { background: #000; color: #fff; font-family: 'Space Grotesk', sans-serif;}
 .nav-adjust {  z-index: 2;}

@@ -2,7 +2,7 @@ import React from 'react'
 
 const Skillset = () => {
     return (
-        <div className='overflow-hidden relative'>
+        <div className='overflow-hidden relative' id='skills'>
             <section className='page-wrapper'>
                 <div className='grid md:grid-cols-4 sm:grid-cols-2 grid-cols-1 sm:text-left text-center space-y-5 border-t-2 sm:py-20 py-16 border-white'>
                     <div>
