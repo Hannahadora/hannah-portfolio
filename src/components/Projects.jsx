@@ -54,7 +54,7 @@ const Projects = () => {
   );
 
   return (
-    <section>
+    <section id="projects">
       <div className="page-wrapper mb-12">
         <div className="flex items-start justify-between pb-16 pt-12">
           <h1 className=" md:text-[80px] text-[32px] leading-none">Projects</h1>

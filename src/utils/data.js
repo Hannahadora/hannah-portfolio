@@ -9,6 +9,7 @@ import sampel_img_8 from '../assests/images/projects/ighopay-page.png'
 import sampel_img_9 from '../assests/images/projects/ayagigs-page.png'
 import sampel_img_10 from '../assests/images/projects/paxity-page.png'
 import sampel_img_11 from '../assests/images/projects/dflab-page.png'
+import sampel_img_12 from '../assests/images/projects/corniehealth-app-page.png'
 
 const projects = [
     // React
@@ -32,9 +33,16 @@ const projects = [
     {
         title:'CornieHealth',
         image:sampel_img_7,
-        stacks:['html', 'css', 'vue 3', 'Nuxt', 'TypeScript', 'Vuex'],
+        stacks:['html', 'css', 'Nuxt', 'TypeScript', 'JavaScript', 'Vuex'],
         type: 'vue',
         url: "https://corniehealth.com/"
+    },
+    {
+        title:'CornieHealth App',
+        image:sampel_img_12,
+        stacks:['html', 'css', 'vue 3', 'TypeScript', 'Vuex'],
+        type: 'vue',
+        url: "https://app.corniehealth.com/signin"
     },
     {
         title:'Ayagigs',
