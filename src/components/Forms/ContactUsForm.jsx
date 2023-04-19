@@ -1,17 +1,16 @@
-import React, { useState } from 'react'
-import CustomButton from '../Shared/CustomButton';
-import Input from '../Shared/Input';
-import TextArea from '../Shared/TextArea';
-import axios from 'axios';
-import { toast } from 'react-toastify';
-
-
+import React, { useEffect, useRef, useState } from "react";
+import CustomButton from "../Shared/CustomButton";
+import Input from "../Shared/Input";
+import TextArea from "../Shared/TextArea";
+import axios from "axios";
+import { toast } from "react-toastify";
+import { zoomOut } from "../../utils/GsapAnimations";
 
 const ContactUsForm = () => {
   const initialValues = {
     name: "",
     email: "",
-    message: ""
+    message: "",
   };
 
   const [values, setValues] = useState(initialValues);
@@ -20,7 +19,8 @@ const ContactUsForm = () => {
     submitting: false,
     info: { error: false, msg: null },
   });
-  
+
+  const contactFormRef = useRef(null);
 
   const onHandleInputChange = (e) => {
     const { name, value } = e.target;
@@ -48,15 +48,19 @@ const ContactUsForm = () => {
     e.preventDefault();
     setStatus((prevStatus) => ({ ...prevStatus, submitting: true }));
     axios({
-      method: 'POST',
+      method: "POST",
       url: process.env.REACT_APP_FORMSPREE_URL_TOKEN,
       data: values,
     })
       .then((response) => {
         handleServerResponse(
           true,
-          // toast.success(`Thank you ${(values.name).c}, your message has been recieved.`), 
-          toast.success(`Thank you ${(values.name).replace(/(^\w{1})|(\s+\w{1})/g, letter => letter.toUpperCase())}, your message has been recieved.`),
+          // toast.success(`Thank you ${(values.name).c}, your message has been recieved.`),
+          toast.success(
+            `Thank you ${values.name.replace(/(^\w{1})|(\s+\w{1})/g, (letter) =>
+              letter.toUpperCase()
+            )}, your message has been recieved.`
+          )
         );
       })
       .catch((error) => {
@@ -64,18 +68,53 @@ const ContactUsForm = () => {
       });
   };
 
+  useEffect(() => {
+    zoomOut(contactFormRef, 0.9)
+  }, [])
+
   return (
-    <div className='w-full max-w-[400px]'>
+    <div ref={contactFormRef} className="w-full max-w-[400px]">
       <form onSubmit={(e) => sendMessage(e)}>
-        <Input name={'name'} value={values.name} label='name' type='text' required={true} onHandleInputChange={(e) => onHandleInputChange(e)} />
-        <Input name={'email'} value={values.email} label='email' type='email' required={true} onHandleInputChange={(e) => onHandleInputChange(e)} />
-        <TextArea name={'message'} value={values.message} label='MESSAGE' type='text' required={true} onHandleInputChange={(e) => onHandleInputChange(e)} />
-        <div className='float-right clear-right'>
-          <CustomButton type="submit" disabled={status.submitting} text={!status.submitting ? !status.submitted ? 'SEND MESSAGE' : 'MESSAGE SENT' : 'SENDING MESSAGE...'} />
+        <Input
+          name={"name"}
+          value={values.name}
+          label="name"
+          type="text"
+          required={true}
+          onHandleInputChange={(e) => onHandleInputChange(e)}
+        />
+        <Input
+          name={"email"}
+          value={values.email}
+          label="email"
+          type="email"
+          required={true}
+          onHandleInputChange={(e) => onHandleInputChange(e)}
+        />
+        <TextArea
+          name={"message"}
+          value={values.message}
+          label="MESSAGE"
+          type="text"
+          required={true}
+          onHandleInputChange={(e) => onHandleInputChange(e)}
+        />
+        <div className="float-right clear-right">
+          <CustomButton
+            type="submit"
+            disabled={status.submitting}
+            text={
+              !status.submitting
+                ? !status.submitted
+                  ? "SEND MESSAGE"
+                  : "MESSAGE SENT"
+                : "SENDING MESSAGE..."
+            }
+          />
         </div>
       </form>
     </div>
-  )
-}
+  );
+};
 
-export default ContactUsForm
+export default ContactUsForm;

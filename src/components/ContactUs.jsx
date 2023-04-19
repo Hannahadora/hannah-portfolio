@@ -1,8 +1,14 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import ContactUsForm from "./Forms/ContactUsForm";
 import TestButton from "./TestButton";
+import { easeIn, zoomOut } from "../utils/GsapAnimations";
 
 const ContactUs = () => {
+  const contactCardRef = useRef(null);
+
+  useEffect(() => {
+    easeIn(contactCardRef);
+  });
   return (
     <>
       <section
@@ -15,7 +21,10 @@ const ContactUs = () => {
           alt="decoration_item"
         />
         <div className="page-wrapper flex lg:flex-row flex-col lg:items-start items-center justify-between">
-          <div className="max-w-[380px] lg:text-left text-center">
+          <div
+            ref={contactCardRef}
+            className="max-w-[380px] lg:text-left text-center"
+          >
             <h1 className=" md:text-[80px] text-[32px] leading-none">
               Contact
             </h1>

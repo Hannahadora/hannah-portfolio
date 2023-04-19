@@ -43,6 +43,9 @@ const Skillset = () => {
             <h1 className="mb-4 md:text-[32px] text-[24px]">React</h1>
           </div>
           <div>
+            <h1 className="mb-4 md:text-[32px] text-[24px]">Redux</h1>
+          </div>
+          <div>
             <h1 className="mb-4 md:text-[32px] text-[24px]">Yup</h1>
           </div>
           <div>

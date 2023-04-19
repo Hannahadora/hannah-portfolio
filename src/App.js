@@ -9,12 +9,14 @@ import Projects from './components/Projects';
 import Experiences from './components/Experiences'
 import { ToastContainer } from 'react-toastify';
 import Sidebar from './components/Sidebar';
+import Landing from './components/Landing';
 
 
 function App() {
   return (
     <main className='max-w-[1920px] mx-auto' >
       <ToastContainer />
+      <Landing />
       <section className='page-wrapper'>
         <Navbar />
         <Sidebar />

@@ -1,11 +1,17 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { projects } from "../utils/data";
 import CustomButton from "./Shared/CustomButton";
 import Tilt from "react-parallax-tilt";
 import Tabs from "./Shared/Tabs";
+import { easeIn } from "../utils/GsapAnimations";
 
 const Projects = () => {
   const [activeTab, setActiveTab] = useState("all");
+  const projectRef = useRef(null)
+
+  useEffect(() => {
+    easeIn(projectRef)
+  }, [activeTab])
 
   const getCurrentIndex = (tab) => {
     setActiveTab(tab);
@@ -23,7 +29,7 @@ const Projects = () => {
 
   const renderProjects = projectsToRender?.map((project, i) =>
       (
-      <div className="uppercase mb-16 cursor-pointer" key={i}>
+      <div ref={projectRef} className="uppercase mb-16 cursor-pointer" key={i}>
         <Tilt
           className="tilt"
           // tiltMaxAngleX={40}
@@ -67,7 +73,7 @@ const Projects = () => {
           tabs={["all", "vue", "react"]}
           currentTab={(tab) => getCurrentIndex(tab)}
         />
-        <div className="sm:grid block grid-cols-4 lg:grid-cols-3 md:grid-cols-2 auto-rows-auto gap-x-[40px]	 ">
+        <div ref={projectRef} className="sm:grid block grid-cols-4 lg:grid-cols-3 md:grid-cols-2 auto-rows-auto gap-x-[40px]	 ">
           {renderProjects}
         </div>
       </div>
