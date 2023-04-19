@@ -17,7 +17,7 @@ const Landing = () => {
     setTimeout(() => {
       ZoomInAndSlideUp(circleRef);
       setHideView(true);
-    }, 10000);
+    }, 5000);
   }, []);
 
   return (
