@@ -14,7 +14,7 @@ const Navbar = () => {
                     <a href="/">
                         <img src={'/images/icon-frontend-mentor.svg'} alt="frontend_mentor_icon" />
                     </a>
-                    <a href="https//twitter.com/ChiamakaHannah" target={'_blank'}>
+                    <a href="https://twitter.com/ChiamakaHannah" target={'_blank'}>
                         <img src={'/images/icon-twitter.svg'} alt="twitter_icon" />
                     </a>
                     <a href="https://www.linkedin.com/in/hannah-ejimofor-a8811a1b3/" target={'_blank'}>
