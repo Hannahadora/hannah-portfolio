@@ -29,8 +29,8 @@ const HeroLanding = () => {
                     <p className='md:max-w-[380px] w-[380px] md:text-[18px] text-[16px] md:mx-0 mx-auto py-[50px]'>Based in the Nigeria, I'm a front-end developer passionate about building accessible web apps that users love.</p>
                     <a href='/files/hannah-resume.pdf' download={"Hannah's Resume"} target={'_blank'}><CustomButton text={'Download Resume'} /></a>
                 </div>
-                <div ref={imageRef} className='md:min-w-[400px] min-w-[300px] md:absolute -top-20 lg:right-0 -right-24 h-[100vh] overflow-y-hidden'>
-                    <img className=' w-full h-[100%] shadow rounded-[40%]' src="/images/my-portrait-1.jpg" alt="my_image" />
+                <div ref={imageRef} className='md:absolute lg:right-0 -right-24overflow-y-hidden'>
+                    <img className='lg:h-[890px] h-[450px] shadow' src="/images/my-portrait-1.jpg" alt="my_image" />
                     <img className='absolute bottom-32 -left-16' src="/images/pattern-circle.svg" alt="patterns" />
                 </div>
             </section>
