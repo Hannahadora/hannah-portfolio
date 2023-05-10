@@ -19,7 +19,7 @@ function App() {
       <Landing />
       <section className='page-wrapper'>
         <Navbar />
-        <Sidebar />
+        {/* <Sidebar /> */}
       </section>
       <div className='md:pb-[300px] pb-[50px] ovf'>
         <HeroLanding />

@@ -30,7 +30,7 @@ const HeroLanding = () => {
                     <a href='/files/hannah-resume.pdf' download={"Hannah's Resume"} target={'_blank'}><CustomButton text={'Download Resume'} /></a>
                 </div>
                 <div ref={imageRef} className='md:max-w-[500px] max-w-[350px] md:absolute -top-20 lg:right-0 -right-24'>
-                    <img className='md:h-[890px] h-[450px] shadow' src="/images/my-portrait-1.jpg" alt="my_image" />
+                    <img className='md:h-[860px] h-[450px] shadow' src="/images/my-portrait-1.jpg" alt="my_image" />
                     <img className='absolute bottom-32 -left-16' src="/images/pattern-circle.svg" alt="patterns" />
                 </div>
             </section>
