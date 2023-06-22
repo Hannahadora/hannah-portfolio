@@ -10,13 +10,15 @@ const Skillset = () => {
 
         <div className="grid lg:grid-cols-5 md:grid-cols-3 grid-cols-2 justify-between sm:text-left text-left space-5">
           <div className="flex items-center">
-            <img className="w-[50px] mr-[10px] h-[50px] mr-[10px]" src="/icons/html5-icon-7.jpg" alt="htmlIcon" />
+            <img className="w-[50px] h-[50px] mr-[10px]" src="/icons/html5-icon-7.jpg" alt="htmlIcon" />
             <h1 className="mb-4 md:text-[24px] text-[18px]">HTML</h1>
           </div>
-          <div>
+          <div className="flex items-center">
+            <img className="w-[50px] h-[50px] mr-[10px]" src="/icons/css3_logo.png" alt="cssIcon" />
             <h1 className="mb-4 md:text-[24px] text-[18px]">CSS</h1>
           </div>
-          <div>
+          <div className="flex items-center">
+            <img className="w-[50px] h-[50px] mr-[10px]" src="/icons/tailwindcss_logo.png" alt="tailwindcssIcon" />
             <h1 className="mb-4 md:text-[24px] text-[18px]">TailwindCss</h1>
           </div>
           <div>

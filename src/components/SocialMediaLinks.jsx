@@ -3,45 +3,57 @@ import React from "react";
 const SocialMediaLinks = () => {
   const sidenavs = [
     {
-      icon: "/icons/tools.svg",
-      alt_icon: "/icons/tools-dark.svg",
-      title: "skills",
-      to: "#skills",
+      icon: "/images/icon-github.svg",
+      alt_icon: "/images/icon-github.svg",
+      title: "Github",
+      to: "https://github.com/Hannahadora",
     },
     {
-      icon: "/icons/projects.svg",
-      alt_icon: "/icons/projects-dark.svg",
-      title: "projects",
-      to: "#projects",
+      icon: "/images/icon-behance.svg",
+      alt_icon: "/images/icon-behance.svg",
+      title: "Behance",
+      to: "https://www.behance.net/hannahejimofor",
     },
     {
-      icon: "/icons/toolbox.svg",
-      alt_icon: "/icons/toolbox-dark.svg",
-      title: "professional experiences",
-      to: "#professional-experiences",
+      icon: "/images/icon-linkedin.svg",
+      alt_icon: "/images/icon-linkedin.svg",
+      title: "LinkedIn",
+      to: "https://www.linkedin.com/in/hannah-ejimofor-a8811a1b3/",
     },
     {
-      icon: "/icons/contact.svg",
-      alt_icon: "/icons/contact-dark.svg",
-      title: "contact",
-      to: "#contact",
+      icon: "/images/icon-twitter.svg",
+      alt_icon: "/images/icon-twitter.svg",
+      title: "Twitter",
+      to: "https://twitter.com/ChiamakaHannah",
+    },
+    {
+      icon: "/images/icon-medium.svg",
+      alt_icon: "/images/icon-medium.svg",
+      title: "Medium",
+      to: "https://medium.com/@hannahadora97",
+    },
+    {
+      icon: "/images/icon-devto.svg",
+      alt_icon: "/images/icon-devto.svg",
+      title: "Dev.to",
+      to: "https://dev.to/hannahadora",
     },
   ];
   return (
-    <div className="fixed h-screen bottom-[0px] right-[10px] z-20">
-      <div className="flex flex-col">
+    <div className="fixed h-screen top-[20px] right-[10px] z-20">
+      <div className="flex flex-col bg-[#ffffff50]">
         {sidenavs?.map((nav, i) => (
           <a
             key={i}
             href={nav.to}
-            className="group/item hover:bg-white rounded p-2 flex items-center space-x-4 w-full mb-[16px] cursor-pointer"
+            target={"_blank"}
+            className="group/item rounded p-2 flex items-center space-x-4 w-full mb-[16px] cursor-pointer"
           >
-            <p className="p-[8px] text-white group-hover/item:border-[#000000] border rounded-full">
-              <img src={nav.icon} alt="" className="group-hover/item:hidden" />
+            <p className="p-[7px] text-white border-4 border-transparent group-hover/item:border-green-500 rounded-full">
               <img
                 src={nav.alt_icon}
-                alt=""
-                className="hidden group-hover/item:block"
+                alt={`${nav.title}_icon`}
+                className="w-[20px]"
               />
             </p>
           </a>

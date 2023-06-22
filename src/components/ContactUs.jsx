@@ -30,7 +30,7 @@ const ContactUs = () => {
             </h1>
             <p className="lg:pt-[28px] pt-[28px]">
               I would love to hear about your project and how I could be of
-              help. Please fill in the form and I'll get back to youas soon as
+              help. Please fill in the form and I'll get back to you as soon as
               possible.
             </p>
             <div className="mt-[40px] lg:pb-0 pb-20 flex flex-col lg:items-start items-center">

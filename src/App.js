@@ -7,6 +7,7 @@ import Footer from './components/Footer';
 import Skillset from './components/Skillset';
 import Projects from './components/Projects';
 import Experiences from './components/Experiences'
+import Blog from './components/Blog'
 import { ToastContainer } from 'react-toastify';
 import Landing from './components/Landing';
 import SocialMediaLinks from './components/SocialMediaLinks';
@@ -27,6 +28,7 @@ function App() {
       <Skillset />
       <Projects />
       <Experiences />
+      <Blog/>
       <ContactUs />
       <Footer />
     </main>

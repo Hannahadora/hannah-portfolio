@@ -10,6 +10,17 @@ export const experiences = [
         skills: ['Nuxt', 'Vue', 'Vuex', 'TypeScript', 'Javascript', 'Element UI', 'Vuelidate']
     },
     {
+        company: 'Curacel',
+        role: 'Frontend Developer - Contract',
+        year: 'November 2022 - December 2022',
+        tasks: [
+            'Migrating Vue Codebase from Angular Codebase',
+            'Converting Angular codebase to vue',
+            'Correction of route errors'
+        ],
+        skills: ['Vue', 'Vuex', 'Bootstrap', 'Javascript', 'Vuelidate']
+    },
+    {
         company: 'CornieHealth',
         role: 'Frontend Developer',
         year: 'January 2022 - December 2022',
