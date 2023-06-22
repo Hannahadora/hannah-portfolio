@@ -8,8 +8,8 @@ import Skillset from './components/Skillset';
 import Projects from './components/Projects';
 import Experiences from './components/Experiences'
 import { ToastContainer } from 'react-toastify';
-import Sidebar from './components/Sidebar';
 import Landing from './components/Landing';
+import SocialMediaLinks from './components/SocialMediaLinks';
 
 
 function App() {
@@ -19,7 +19,7 @@ function App() {
       <Landing />
       <section className='page-wrapper'>
         <Navbar />
-        {/* <Sidebar /> */}
+        <SocialMediaLinks />
       </section>
       <div className='md:pb-[300px] pb-[50px] ovf'>
         <HeroLanding />

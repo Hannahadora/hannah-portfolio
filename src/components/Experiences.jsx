@@ -10,24 +10,32 @@ const Experiences = () => {
         </h1>
       </div>
 
-      <div className="lg:w-[60%] md:w-[80%] w-full mb-[40px]">
+      <div className="w-full mb-[40px]">
         {experiences?.map((el, i) => (
-          <div key={i} className="mb-[40px]">
-            <p className="lg:text-[32px] md:text-[28px] text-[24px] font-medium">
-              {el.role} - <span className="md:text-[20px] text-[18px] font-[400] italic">{el.year}</span>
-            </p>
-            <p className="lg:text-[32px] md:text-[28px] text-[24px] font-medium">{el.company}</p>
-            <ul className="my-[8px] list-disc list-inside">
+          <div
+            key={i}
+            className="mb-[40px] lg:flex items-start justify-between w-full"
+          >
+            <div className="lg:w-[25%]">
+              <p className="text-[18px] font-medium flex space-x-[10px] mb-[8px]"><img src="/icons/role.svg" alt="user_icon" /><span>{el.role}</span></p>
+              <p className="text-[15px] font-[400] italic flex space-x-[10px] mb-[8px]"><img src="/icons/calendar.svg" alt="calendar_icon" /><span>
+                {el.year}</span>
+              </p>
+              <p className="text-[20px] font-medium flex space-x-[10px] mb-[8px]"><img src="/icons/company.svg" alt="company_icon" /><span>{el.company}</span></p>
+            </div>
+            <ul className="lg:w-[50%] mx-[40px] list-disc list-inside">
               {el.tasks?.map((task, i) => (
                 <li className="mb-[4px]">{task}</li>
               ))}
             </ul>
-            <p className="font-medium text-[20px] my-[8px]">Skills:</p>
-            <ul className="flex flex-wrap">
-              {el.skills?.map((skill, i) => (
-                <li className="mr-[12px]">{skill},</li>
-              ))}
-            </ul>
+            <div className="lg:w-[25%]">
+              <p className="font-medium text-[16px]">Skills:</p>
+              <ul className="flex flex-wrap">
+                {el.skills?.map((skill, i) => (
+                  <li className="mr-[12px]">{skill} {i === el.skills.length - 1 ? '' : ','} </li>
+                ))}
+              </ul>
+            </div>
           </div>
         ))}
       </div>
