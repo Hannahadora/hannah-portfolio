@@ -38,7 +38,7 @@ const Blog = () => {
         scale={1.0}
         gyroscope={false}
       >
-        <a href={article.url} target={"_blank"}>
+        <a className="z-50" href={article.url} target={"_blank"}>
           <img
             className="w-full rounded-md"
             src={article.image}
@@ -47,11 +47,11 @@ const Blog = () => {
         </a>
       </Tilt>
       <h1 className="font-bold pt-4 pb-2">{article.title}</h1>
-      <div className="group-hover/item:block hidden bg-[#00000080] absolute top-0 w-full h-full">
+      {/* <div className="z-2 group-hover/item:block hidden bg-[#00000080] absolute top-0 w-full h-full">
         <div className="w-full h-full flex flex-col items-center p-[20px]">
           <p className="italic text-center text-[13px]">{article.desc}</p>
         </div>
-      </div>
+      </div> */}
     </div>
   ));
 
