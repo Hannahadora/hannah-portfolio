@@ -18,19 +18,21 @@ function App() {
     <main className='max-w-[1920px] mx-auto' >
       <ToastContainer />
       <Landing />
-      <section className='page-wrapper'>
-        <Navbar />
-        <SocialMediaLinks />
+      <section className='relative'>
+        <section className='page-wrapper'>
+          <Navbar />
+          <SocialMediaLinks />
+        </section>
+        <div className='md:pb-[300px] pb-[50px] ovf'>
+          <HeroLanding />
+        </div>
+        <Skillset />
+        <Projects />
+        <Experiences />
+        <Blog />
+        <ContactUs />
+        <Footer />
       </section>
-      <div className='md:pb-[300px] pb-[50px] ovf'>
-        <HeroLanding />
-      </div>
-      <Skillset />
-      <Projects />
-      <Experiences />
-      <Blog/>
-      <ContactUs />
-      <Footer />
     </main>
   );
 }
