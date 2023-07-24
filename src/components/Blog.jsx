@@ -28,30 +28,35 @@ const Blog = () => {
   const articlesToRender = filteredArticles(); // Call the function to get the array
 
   const renderArticles = articlesToRender?.map((article, i) => (
-    <div ref={articleRef} className="group/item mb-16 cursor-pointer relative" key={i}>
-      <Tilt
-        className="tilt"
-        // tiltMaxAngleX={40}
-        // tiltMaxAngleY={40}/
-        // perspective={1000}
-        transitionSpeed={1000}
-        scale={1.0}
-        gyroscope={false}
-      >
-        <a className="z-50" href={article.url} target={"_blank"}>
+    <div ref={articleRef} key={i} className=" mb-16">
+      <div className="group/item cursor-pointer relative border border-[#d4d4d480] rounded-md">
+        <Tilt
+          className="tilt"
+          // tiltMaxAngleX={40}
+          // tiltMaxAngleY={40}/
+          // perspective={1000}
+          transitionSpeed={1000}
+          scale={1.0}
+          gyroscope={false}
+        >
           <img
             className="w-full rounded-md"
             src={article.image}
             alt={article.title}
           />
-        </a>
-      </Tilt>
-      <h1 className="font-bold pt-4 pb-2">{article.title}</h1>
-      {/* <div className="z-2 group-hover/item:block hidden bg-[#00000080] absolute top-0 w-full h-full">
-        <div className="w-full h-full flex flex-col items-center p-[20px]">
-          <p className="italic text-center text-[13px]">{article.desc}</p>
+        </Tilt>
+        <div className="z-2 group-hover/item:block hidden bg-[#00000090] absolute top-0 w-full h-full">
+          <div className="w-full h-full flex flex-col items-center justify-center p-[20px]">
+            <p className="italic text-center text-[13px]">{article.desc}</p>
+          </div>
         </div>
-      </div> */}
+      </div>
+      <h1 className="font-bold pt-4 pb-2">{article.title}</h1>
+      <p className="text-green-500 font-bold float-right">
+        <a className="z-50" href={article.url} target={"_blank"}>
+          Read
+        </a>
+      </p>
     </div>
   ));
 

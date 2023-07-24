@@ -1,9 +1,17 @@
 import blog_img_1 from '../assests/images/blog/nuxt_pinia.png'
 import blog_img_2 from '../assests/images/blog/aws_network_topology.png'
 import blog_img_3 from '../assests/images/blog/aws_ec2_alb_asg.png'
+import blog_img_4 from '../assests/images/blog/jest-and-react-vite.png'
 
 const articles = [
     // Frontend
+    {
+        title:'Installing Jest for Testing in Your Vite-React TypeScript Project. A Step-by-Step Guide',
+        image:blog_img_4,
+        desc: "The aim of the article is to show how unit testing is done in a react-vite app with Jest. From the setup, down to the implementation.",
+        type: 'frontend development',
+        url: "https://dev.to/hannahadora/jest-testing-with-vite-and-react-typescript-4bap"
+    },
     {
         title:'Managing state with Pinia and Nuxt 3 - Using a simple add to cart instance',
         image:blog_img_1,
@@ -11,7 +19,6 @@ const articles = [
         type: 'frontend development',
         url: "https://dev.to/hannahadora/managing-state-with-pinia-and-nuxt-3-using-a-simple-add-to-cart-instance-1faf"
     },
-
     // DevOps
     {
         title:'Building a Scalable Network Infrastructure on AWS',

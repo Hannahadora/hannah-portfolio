@@ -52,6 +52,28 @@ input:-webkit-autofill:active  { -webkit-box-shadow: 0 0 0 30px inherit inset !i
 .wrapper .input-data > .textarea-label { padding-left: 12px; position: absolute; bottom: 50px; left: 0; font-size: 14px; text-transform: uppercase; color: rgb(165, 164, 164); pointer-events: none; transition: all 0.3s ease;}
 .margin-adjust { margin-bottom: 6px;}
 
+.kYBbUa {
+  padding: 0px 10px;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  max-width: 280px;
+  min-width: 260px;
+  height: 55px;
+  border: 1px solid rgba(255, 255, 255, 0);
+  box-shadow: rgba(255, 255, 255, 0) -4px 4px 8px 1px;
+  font-size: 1.8rem;
+  background-color: #2965f1;
+
+  translate: none;
+  rotate: none;
+  scale: none;
+  transform: translate(0px, 0px);
+  opacity: 1;
+}
+
 @media screen and (max-width: 1024px) {
   .page-wrapper { margin-left: 20px; margin-right: 20px; }
   .ovf { overflow-x: hidden;}

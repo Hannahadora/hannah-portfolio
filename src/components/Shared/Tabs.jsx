@@ -14,7 +14,7 @@ const Tabs = ({tabs, currentTab}) => {
       {tabs &&
         tabs.map((tab, i) => (
           <div
-            className={`capitalize pb-3 text-xl cursor-pointer ${checkActive(i)}`}
+            className={`capitalize pb-3 lg:text-xl md:text-lg text-base cursor-pointer ${checkActive(i)}`}
             key={i}
             onClick={() => setTab(i, tab)}
           >

@@ -86,6 +86,10 @@ const Skillset = () => {
       title: "Firebase",
       logo: "/icons/firebase_logo.png",
     },
+    {
+      title: "Jest",
+      logo: "",
+    },
   ];
   return (
     <div className="overflow-hidden relative" id="skills">
@@ -94,20 +98,28 @@ const Skillset = () => {
           <h1 className=" md:text-[80px] text-[32px] leading-none">Skills</h1>
         </div>
 
-        <div className="grid lg:grid-cols-5 md:grid-cols-3 grid-cols-2 justify-between sm:text-left text-left space-5">
+        <div className="grid lg:grid-cols-5 md:grid-cols-3 grid-cols-2 justify-between sm:text-left text-left">
           {skills.map((skill, i) => (
             <div
               key={i}
-              className="px-[10px] py-[20px] border border-[0.5px] border-green-300 flex items-center justify-center"
+              className="px-[7px] py-[10px] bg-[#d4d4d430] rounded-xl flex items-center justify-between mr-[10px] mb-[10px]"
             >
-              <div className="w-[50px] mr-[10px]">
-                <img
-                  className="w-full"
-                  src={skill.logo}
-                  alt={`${skill.title}_logo`}
-                />
+              <div className="flex items-center">
+                <div className="md:w-[25px] w-[17px] h-[25px] mr-[10px]">
+                  {skill.logo ? <img
+                    className="w-full"
+                    src={skill.logo}
+                    alt={`${skill.title}_logo`}
+                  /> : '💯'}
+                </div>
+                <h1 className="md:text-[20px] text-[15px]">
+                  {skill.title}
+                </h1>
               </div>
-              <h1 className="mb-4 md:text-[24px] text-[18px]">{skill.title}</h1>
+
+              <div>
+                ✅
+              </div>
             </div>
           ))}
         </div>

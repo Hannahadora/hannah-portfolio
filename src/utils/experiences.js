@@ -1,6 +1,7 @@
 export const experiences = [
     {
         company: 'Anamen Limited',
+        location: 'Lagos state, Nigeria',
         role: 'Frontend Developer',
         year: 'October 2022 - present',
         tasks: [
@@ -11,6 +12,7 @@ export const experiences = [
     },
     {
         company: 'Curacel',
+        location: 'Lagos state, Nigeria',
         role: 'Frontend Developer - Contract',
         year: 'November 2022 - December 2022',
         tasks: [
@@ -22,6 +24,7 @@ export const experiences = [
     },
     {
         company: 'CornieHealth',
+        location: 'Lagos state, Nigeria',
         role: 'Frontend Developer',
         year: 'January 2022 - December 2022',
         tasks: [
@@ -32,6 +35,7 @@ export const experiences = [
     },
     {
         company: 'Chigisoft',
+        location: 'Rivers state, Nigeria',
         role: 'Frontend Developer',
         year: 'December 2021 - November 2022',
         tasks: [
@@ -43,6 +47,7 @@ export const experiences = [
     },
     {
         company: 'Chigisoft',
+        location: 'Rivers state, Nigeria',
         role: 'Frontend Developer - Internship',
         year: 'May 2021 - November 2021',
         tasks: [
